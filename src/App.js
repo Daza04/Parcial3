@@ -5,6 +5,7 @@ import './App.css';
 import { useState } from 'react';
 import YouTube from 'react-youtube';
 
+
 function App() {
   const API_URL = "https://api.themoviedb.org/3";
   const API_KEY = "4f5f43495afcc67e9553f6c684a82f84";
@@ -75,6 +76,7 @@ function App() {
 
   useEffect(() => {
     fetchMovies();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -82,7 +84,6 @@ function App() {
       <h1 className="text-center mt-5 mb-5">MOVIES-REACT</h1>
 
       
-
       {/* el buscador */}
       <form className="container mb-4" onSubmit={searchMovies}>
         <input
